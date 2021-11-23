@@ -25,8 +25,4 @@ RUN unzip master.zip && \
     cd .. && \
     rm -rf bwa-master
 
-RUN echo 'alias l="ls -lh --color=always"' >> /etc/profile
-RUN echo 'alias u="cd ..; l"' >> /etc/profile
-ENV ENV="/etc/profile"
-
 WORKDIR /data

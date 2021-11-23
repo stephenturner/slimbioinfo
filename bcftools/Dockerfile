@@ -24,8 +24,4 @@ RUN tar -xjf htslib-${VERSION}.tar.bz2 && \
     cd .. && \
     rm -rf htslib-${VERSION}
 
-RUN echo 'alias l="ls -lh --color=always"' >> /etc/profile
-RUN echo 'alias u="cd ..; l"' >> /etc/profile
-ENV ENV="/etc/profile"
-
 WORKDIR /data
