@@ -4,7 +4,7 @@ Slim Docker images for bioinformatics tools built on Alpine Linux.
 
 ## Building
 
-Build an image:
+Build a single image:
 
 ```sh
 docker build --no-cache -t imagename
@@ -16,6 +16,16 @@ Push to Docker Hub:
 # docker login
 docker tag imagename username/imagename
 docker push username/imagename
+```
+
+Build all images:
+
+```sh
+find . -type f -name "Dockerfile" -exec dirname {} \; \
+    | sed  's/\.\///g' \
+    | xargs -I{} echo "docker build --no-cache -t {} {}/" \
+    > BUILD.sh
+bash build.sh
 ```
 
 ## Usage
