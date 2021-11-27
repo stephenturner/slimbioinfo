@@ -2,7 +2,7 @@ FROM alpine:3.15
 
 ARG VERSION="0.7.17"
 
-RUN apk update && apk add gcc make libc-dev zlib-dev wget
+RUN apk update && apk add --no-cache gcc make libc-dev zlib-dev wget
 
 # Note 0.7.17 release doesn't work with gcc 10
 # WORKDIR /src
