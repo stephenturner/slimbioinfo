@@ -10,6 +10,7 @@ RUN wget https://github.com/stephenturner/ped-sim/archive/refs/tags/v${VERSION}.
     cd ped-sim-${VERSION} && \
     make && \
     install -D -t /usr/local/bin ped-sim && \
+    mkdir -p /data && cp -r interfere /data && \
     cd .. && \
     rm -rf v${VERSION}.tar.gz ped-sim-${VERSION} && \
     echo ${VERSION} > /root/VERSION
