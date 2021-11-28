@@ -11,6 +11,7 @@ RUN wget https://github.com/lh3/minimap2/releases/download/v${VERSION}/minimap2-
     make -j4 && \
     install -D -t /usr/local/bin minimap2 && \
     cd .. && \
-    rm -rf minimap2-${VERSION} minimap2-${VERSION}.tar.bz2
+    rm -rf minimap2-${VERSION} minimap2-${VERSION}.tar.bz2 && \
+    echo ${VERSION} > /root/VERSION
 
 WORKDIR /data

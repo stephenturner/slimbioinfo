@@ -11,8 +11,7 @@ RUN wget https://github.com/stephenturner/ped-sim/archive/refs/tags/v${VERSION}.
     make && \
     install -D -t /usr/local/bin ped-sim && \
     cd .. && \
-    # rm -rf v${VERSION}.tar.gz ped-sim-${VERSION} && \
-    # apk del gcc g++ make libc-dev zlib-dev wget && \ 
-    echo > /dev/null
+    rm -rf v${VERSION}.tar.gz ped-sim-${VERSION} && \
+    echo ${VERSION} > /root/VERSION
 
 WORKDIR /data
