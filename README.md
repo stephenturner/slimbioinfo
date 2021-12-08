@@ -1,6 +1,6 @@
 # slimbioinfo
 
-Slim Docker images for bioinformatics tools built on Alpine Linux. 
+Slim Docker images for bioinformatics tools built on Alpine Linux (mostly). 
 
 ## Building
 
