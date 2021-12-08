@@ -5,7 +5,7 @@ ARG VERSION="1.3.4"
 RUN apk update && apk add --no-cache gcc g++ make libc-dev zlib-dev wget boost-dev
 
 WORKDIR /src
-RUN wget https://github.com/stephenturner/ped-sim/archive/refs/tags/v${VERSION}.tar.gz && \
+RUN wget https://github.com/williamslab/ped-sim/archive/refs/tags/v${VERSION}.tar.gz && \
     tar xzf v${VERSION}.tar.gz && \
     cd ped-sim-${VERSION} && \
     make && \
