@@ -19,4 +19,5 @@ RUN apk update && apk add xz-dev bzip2-dev
 COPY --from=0 /usr/local/bin/bcftools /usr/local/bin/bcftools
 COPY --from=0 /usr/local/bin/tabix /usr/local/bin/tabix
 COPY --from=0 /usr/local/bin/bgzip /usr/local/bin/bgzip
+COPY --from=0 /usr/local/libexec/bcftools /usr/local/libexec/bcftools
 WORKDIR /data
