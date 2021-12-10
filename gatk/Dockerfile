@@ -2,13 +2,12 @@ FROM alpine:3.15
 
 ARG VERSION="4.2.3.0"
 
-RUN apk update && apk add --no-cache openjdk8 python3 wget && ln -s /usr/bin/python3 /usr/bin/python
+RUN apk add --update --no-cache openjdk8-jre python3 wget && ln -sf python3 /usr/bin/python
 
 WORKDIR /src
 RUN wget -q https://github.com/broadinstitute/gatk/releases/download/${VERSION}/gatk-${VERSION}.zip && \
     unzip gatk-${VERSION}.zip && \
-    rm gatk-${VERSION}.zip && \
-    ln -s /src/gatk-${VERSION}/gatk-package-${VERSION}-local.jar /src/gatk.jar
+    rm -rf gatk-${VERSION}.zip gatk-${VERSION}/gatk-package-${VERSION}-spark.jar gatk-${VERSION}/gatkdoc
 
 ENV PATH="/src/gatk-${VERSION}:${PATH}"
 
