@@ -24,3 +24,4 @@ ENV TZ=America/New_York
 RUN apt-get update && apt-get install -y libboost-all-dev
 COPY --from=0 /usr/bin/dragen-os /usr/bin/dragen-os
 WORKDIR /data
+ENTRYPOINT ["dragen-os"]

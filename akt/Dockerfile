@@ -13,3 +13,4 @@ ARG VERSION
 RUN apk update && apk add --no-cache libgomp libstdc++
 COPY --from=0 /akt-${VERSION}/akt /usr/local/bin/akt
 WORKDIR /data
+ENTRYPOINT ["akt"]

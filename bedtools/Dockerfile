@@ -9,3 +9,4 @@ RUN wget https://github.com/arq5x/bedtools2/releases/download/v${VERSION}/bedtoo
     echo ${VERSION} > /root/VERSION
 
 WORKDIR /data
+ENTRYPOINT ["bedtools"]

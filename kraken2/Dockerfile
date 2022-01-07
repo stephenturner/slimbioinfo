@@ -13,3 +13,4 @@ ARG VERSION
 RUN apk add --no-cache bash perl libstdc++ libgcc libgomp
 COPY --from=0 /usr/local/bin /usr/local/bin
 WORKDIR /data
+ENTRYPOINT ["kraken2"]

@@ -24,3 +24,4 @@ FROM alpine:3.15
 ARG VERSION
 COPY --from=0 bwa-${VERSION}/bwa /usr/local/bin/bwa
 WORKDIR /data
+ENTRYPOINT ["bwa"]

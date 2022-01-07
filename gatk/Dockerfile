@@ -12,3 +12,4 @@ RUN wget -q https://github.com/broadinstitute/gatk/releases/download/${VERSION}/
 ENV PATH="/src/gatk-${VERSION}:${PATH}"
 
 WORKDIR /data
+ENTRYPOINT ["gatk"]

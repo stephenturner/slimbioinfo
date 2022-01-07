@@ -14,3 +14,4 @@ ARG VERSION
 COPY --from=0 /ped-sim-${VERSION}/ped-sim /usr/local/bin/ped-sim
 COPY --from=0 /ped-sim-${VERSION}/interfere /data/interfere
 WORKDIR /data
+ENTRYPOINT ["ped-sim"]

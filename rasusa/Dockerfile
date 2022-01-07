@@ -10,3 +10,4 @@ FROM alpine:3.15
 ARG VERSION
 COPY --from=0 /rasusa-${VERSION}-x86_64-unknown-linux-musl/rasusa /usr/local/bin/rasusa
 WORKDIR /data
+ENTRYPOINT ["rasusa"]

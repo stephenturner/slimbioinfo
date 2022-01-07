@@ -12,3 +12,4 @@ FROM alpine:3.15
 ARG VERSION
 COPY --from=0 minimap2-${VERSION}/minimap2 /usr/local/bin/minimap2
 WORKDIR /data
+ENTRYPOINT ["minimap2"]

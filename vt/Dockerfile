@@ -9,3 +9,4 @@ FROM alpine:3.15
 RUN apk update && apk add --no-cache curl libstdc++ xz-dev bzip2-dev 
 COPY --from=0 /vt/vt /usr/local/bin/vt
 WORKDIR /data
+ENTRYPOINT ["vt"]

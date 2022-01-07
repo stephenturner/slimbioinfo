@@ -10,3 +10,4 @@ FROM alpine:3.15
 ARG VERSION
 COPY --from=0 /seqkit /usr/local/bin/seqkit
 WORKDIR /data
+ENTRYPOINT ["seqkit"]
