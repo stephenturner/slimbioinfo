@@ -1,2 +1,2 @@
 FROM stephenturner/htslib
-ENTRYPOINT ["bcftools"]
+ENTRYPOINT ["samtools"]
