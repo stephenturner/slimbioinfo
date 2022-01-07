@@ -39,6 +39,18 @@ Run an executable from the image mounting the local current working directory to
 docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) imagename
 ```
 
+Create an alias to make this a little easier. Put this in your `~/.bashrc`:
+
+```sh
+function docker_run { docker run --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pwd) "$@"; }
+```
+
+Then: 
+
+```sh
+docker_run imagename
+```
+
 Run multiple piped commands inside the container. Example with bcftools assuming `example.vcf.gz` lives in the current working directory:
 
 ```sh
