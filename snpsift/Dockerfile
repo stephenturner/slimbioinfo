@@ -11,4 +11,4 @@ RUN wget -q https://snpeff.blob.core.windows.net/versions/snpEff_${VERSION}_core
 ENV PATH="/snpEff/scripts:${PATH}"
 
 WORKDIR /data
-ENTRYPOINT ["snpEff"]
+ENTRYPOINT ["snpSift"]
