@@ -19,3 +19,13 @@ RUN wget -q https://github.com/samtools/samtools/releases/download/${VERSION_HTS
     ./configure --without-curses && \
     make -j4 && \
     make install
+
+FROM alpine:3.15
+RUN apk update && apk add xz-dev bzip2-dev
+COPY --from=0 /usr/local/bin/tabix /usr/local/bin/tabix
+COPY --from=0 /usr/local/bin/bgzip /usr/local/bin/bgzip
+COPY --from=0 /usr/local/bin/bcftools /usr/local/bin/bcftools
+COPY --from=0 /usr/local/libexec/bcftools /usr/local/libexec/bcftools
+COPY --from=0 /usr/local/bin/samtools /usr/local/bin/samtools
+COPY --from=0 /usr/local/bin/wgsim /usr/local/bin/wgsim
+WORKDIR /data
