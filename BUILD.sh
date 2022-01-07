@@ -2,6 +2,7 @@
 docker build --no-cache -t stephenturner/akt akt/
 docker build --no-cache -t stephenturner/bcftools bcftools/
 docker build --no-cache -t stephenturner/bedtools bedtools/
+docker build --no-cache -t stephenturner/bgzip bgzip/
 docker build --no-cache -t stephenturner/bwa bwa/
 docker build --no-cache -t stephenturner/core core/
 docker build --no-cache -t stephenturner/dragmap dragmap/
@@ -11,6 +12,10 @@ docker build --no-cache -t stephenturner/kraken2 kraken2/
 docker build --no-cache -t stephenturner/minimap2 minimap2/
 docker build --no-cache -t stephenturner/ped-sim ped-sim/
 docker build --no-cache -t stephenturner/rasusa rasusa/
+docker build --no-cache -t stephenturner/samtools samtools/
 docker build --no-cache -t stephenturner/seqkit seqkit/
 docker build --no-cache -t stephenturner/snpeff snpeff/
+docker build --no-cache -t stephenturner/snpsift snpsift/
+docker build --no-cache -t stephenturner/tabix tabix/
 docker build --no-cache -t stephenturner/vt vt/
+docker build --no-cache -t stephenturner/wgsim wgsim/
