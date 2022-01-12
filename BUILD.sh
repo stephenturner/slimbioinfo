@@ -17,6 +17,7 @@ docker build --no-cache -t stephenturner/mosdepth mosdepth/
 docker build --no-cache -t stephenturner/mutserve mutserve/
 docker build --no-cache -t stephenturner/ped-sim ped-sim/
 docker build --no-cache -t stephenturner/rasusa rasusa/
+docker build --no-cache -t stephenturner/rtg rtg/
 docker build --no-cache -t stephenturner/samtools samtools/
 docker build --no-cache -t stephenturner/seqkit seqkit/
 docker build --no-cache -t stephenturner/snpeff snpeff/
