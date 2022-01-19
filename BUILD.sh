@@ -1,5 +1,6 @@
 #!/bin/bash
 docker build --no-cache -t stephenturner/akt akt/
+docker build --no-cache -t stephenturner/angsd angsd/
 docker build --no-cache -t stephenturner/bcftools bcftools/
 docker build --no-cache -t stephenturner/beagle beagle/
 docker build --no-cache -t stephenturner/beagle4 beagle4/
