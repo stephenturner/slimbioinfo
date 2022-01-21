@@ -10,6 +10,7 @@ docker build --no-cache -t stephenturner/bgzip bgzip/
 docker build --no-cache -t stephenturner/bwa bwa/
 docker build --no-cache -t stephenturner/core core/
 docker build --no-cache -t stephenturner/dragmap dragmap/
+docker build --no-cache -t stephenturner/edirect edirect/
 docker build --no-cache -t stephenturner/gatk gatk/
 docker build --no-cache -t stephenturner/htslib htslib/
 docker build --no-cache -t stephenturner/kraken2 kraken2/
